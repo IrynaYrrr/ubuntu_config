@@ -47,3 +47,22 @@ https://www.jetbrains.com/help/webstorm/installation-guide.html#standalone
 `sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb`
 
 
+# SSH keys
+
+`ssh-keygen`
+
+`cat .ssh/id_rsa.pub`
+
+
+# KeeWeb
+
+```
+sudo wget -O - https://tagplus5.github.io/keeweb-ppa/ubuntu/gpg.key | sudo apt-key add - && \
+sudo wget -O /etc/apt/sources.list.d/keeweb.list https://tagplus5.github.io/keeweb-ppa/ubuntu/keeweb.list && \
+sudo apt update && \
+sudo apt install keeweb-desktop
+```
+
+
+
+
