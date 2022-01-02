@@ -51,7 +51,7 @@ https://www.jetbrains.com/help/webstorm/installation-guide.html#standalone
 
 `ssh-keygen`
 
-`cat .ssh/id_rsa.pub`
+`cat ~/.ssh/id_rsa.pub`
 
 
 # KeeWeb
