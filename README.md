@@ -1,6 +1,6 @@
 # ubuntu_config
 
-sudo apt update && sudo apt upgrade && sudo apt install curl wget
+`sudo apt update && sudo apt upgrade && sudo apt install curl wget`
 
 
 # Node.js
