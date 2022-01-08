@@ -1,27 +1,56 @@
 # ubuntu_config
 
-`sudo apt update && sudo apt upgrade && sudo apt install curl wget git`
+```
+sudo apt update && sudo apt upgrade && sudo apt install curl wget git gnupg
+```
+
+
+# SSH keys
+
+## create
+
+```
+ssh-keygen
+```
+
+## show public key
+
+```
+cat ~/.ssh/id_rsa.pub
+```
 
 
 # Node.js
 
-`curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -`
+```
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+```
 
-`sudo apt-get install -y nodejs`
+```
+sudo apt-get install -y nodejs`
+```
 
 
 # Yarn
 
-`curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
+```
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+```
 
-`echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
+```
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+```
 
-`sudo apt update && sudo apt install yarn`
+```
+sudo apt update && sudo apt install yarn
+```
 
 
 # Typescript
 
-`sudo npm i -g typescript`
+```
+sudo npm i -g typescript
+```
 
 
 # VSCode
@@ -33,25 +62,27 @@ sudo apt update &&
 sudo apt install code
 ```
 
+
 # Webstorm
 
-https://www.jetbrains.com/help/webstorm/installation-guide.html#standalone
+```
+sudo snap install webstorm --classic
+```
 
 
 # Chrome
 
-`cd Downloads`
+```
+cd Downloads
+```
 
-`wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+```
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+```
 
-`sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb`
-
-
-# SSH keys
-
-`ssh-keygen`
-
-`cat ~/.ssh/id_rsa.pub`
+```
+sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+```
 
 
 # KeeWeb
@@ -64,5 +95,50 @@ sudo apt install keeweb-desktop
 ```
 
 
+# Robo3T
+
+```
+sudo snap install robo3t-snap
+```
 
 
+# Postman
+
+```
+sudo snap install postman
+```
+
+
+# MongoDB
+
+## install
+
+```
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+```
+
+```
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+```
+
+```
+sudo apt-get update
+```
+
+```
+sudo apt-get install -y mongodb-org
+```
+
+```
+sudo systemctl start mongod
+```
+
+```
+sudo systemctl enable mongod
+```
+
+## check status
+
+```
+sudo systemctl status mongod
+```
